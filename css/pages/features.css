@@ -1,0 +1,167 @@
+.features-page {
+    padding-top: 80px;
+}
+
+.features-hero {
+    background: linear-gradient(135deg, var(--secondary-color), #1a2735);
+    padding: 120px 2rem 80px;
+    text-align: center;
+    color: var(--white);
+}
+
+.features-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.features-hero p {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Ana Özellikler */
+.main-features {
+    padding: 80px 0;
+    background: var(--light-bg);
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.feature-card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.feature-icon i {
+    font-size: 1.5rem;
+    color: var(--white);
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.feature-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.feature-list {
+    list-style: none;
+    padding: 0;
+}
+
+.feature-list li {
+    margin-bottom: 0.5rem;
+    color: #666;
+    display: flex;
+    align-items: center;
+}
+
+.feature-list li::before {
+    content: '•';
+    color: var(--primary-color);
+    margin-right: 0.5rem;
+}
+
+/* Teknoloji Stack */
+.tech-stack {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.tech-stack h2 {
+    margin-bottom: 3rem;
+    color: var(--secondary-color);
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+    padding: 0 2rem;
+}
+
+.tech-item img {
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.tech-item img:hover {
+    transform: scale(1.1);
+}
+
+.tech-item h4 {
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    margin-top: 1rem;
+}
+
+/* CTA Section */
+.features-cta {
+    background: linear-gradient(135deg, var(--primary-color), #357abd);
+    padding: 80px 0;
+    text-align: center;
+    color: var(--white);
+}
+
+.cta-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .features-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .features-hero p {
+        font-size: 1rem;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+} 
