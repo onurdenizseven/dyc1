@@ -1,18 +1,30 @@
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-const navButtons = document.querySelector('.nav-buttons');
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+    const navButtons = document.querySelector('.nav-buttons');
 
-hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('active');
-    navLinks.classList.toggle('active');
-    navButtons.classList.toggle('active');
-});
+    function toggleMenu() {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('active');
+        navButtons.classList.toggle('active');
+    }
 
-// Menü linklerine tıklandığında menüyü kapat
-document.querySelectorAll('.nav-links a').forEach(link => {
-    link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navLinks.classList.remove('active');
-        navButtons.classList.remove('active');
+    hamburger.addEventListener('click', function(e) {
+        e.preventDefault();
+        toggleMenu();
+    });
+
+    // Menü dışına tıklandığında menüyü kapat
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.navbar-container') && navLinks.classList.contains('active')) {
+            toggleMenu();
+        }
+    });
+
+    // Link tıklamalarında menüyü kapat
+    navLinks.addEventListener('click', function(e) {
+        if (e.target.tagName === 'A') {
+            toggleMenu();
+        }
     });
 }); 
